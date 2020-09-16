@@ -2,7 +2,7 @@ from tkinter import *
 import secrets
 from pygame import mixer
 
-# window stuff
+# window config
 window = Tk()
 window.geometry("447x314")
 window.title("Duke KeyGen of Death")
