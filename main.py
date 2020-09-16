@@ -1,12 +1,16 @@
 from tkinter import *
 import secrets
-
+from pygame import mixer
 
 window = Tk()
 window.geometry("447x314")
 window.title("Duke KeyGen of Death")
 window.configure(background="black")
 window.resizable(False, False)
+
+mixer.init()
+mixer.music.load("tune.mp3")
+mixer.music.play()
 
 
 def display_key():
