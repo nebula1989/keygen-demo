@@ -2,18 +2,27 @@ from tkinter import *
 import secrets
 from pygame import mixer
 
+# window stuff
 window = Tk()
 window.geometry("447x314")
 window.title("Duke KeyGen of Death")
 window.configure(background="black")
 window.resizable(False, False)
 
+#  photo
+skull_photo = PhotoImage(file="skull.gif")
+Label(window, image=skull_photo, bg="black").grid(row=0, column=0, sticky=E)
+
+# audio mixer
 mixer.init()
 mixer.music.load("tune.mp3")
 mixer.music.play()
 
 
 def display_key():
+    """
+    on click, display the key
+    """
 
     first4 = secrets.token_hex(2)
     second4 = secrets.token_hex(2)
@@ -26,16 +35,9 @@ def display_key():
     key_text.configure(state="disabled")
 
 
-#  photo
-skull_photo = PhotoImage(file="skull.gif")
-Label(
-    window, image=skull_photo, bg="black"
-).grid(row=0, column=0, sticky=E)
-
+# button
 genkey_btn = Button(window, text="Generate a Key", command=display_key, bg="green")
 genkey_btn.place(x=180, y=30)
-
-
 
 
 window.mainloop()
