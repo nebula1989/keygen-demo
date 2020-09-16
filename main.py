@@ -1,6 +1,6 @@
 from tkinter import *
 import secrets
-from pygame import mixer
+
 
 # window config
 window = Tk()
@@ -13,10 +13,6 @@ window.resizable(False, False)
 skull_photo = PhotoImage(file="skull.gif")
 Label(window, image=skull_photo, bg="black").grid(row=0, column=0, sticky=E)
 
-# audio mixer
-mixer.init()
-mixer.music.load("tune.mp3")
-mixer.music.play()
 
 
 def display_key():
