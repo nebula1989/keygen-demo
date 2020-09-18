@@ -14,7 +14,6 @@ skull_photo = PhotoImage(file="skull.gif")
 Label(window, image=skull_photo, bg="black").grid(row=0, column=0, sticky=E)
 
 
-
 def display_key():
     """
     on click, display the key
