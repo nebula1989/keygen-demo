@@ -1,17 +1,19 @@
-from tkinter import *
+from tkinter import Label, Tk, PhotoImage, Text, Button, E
+from PIL import ImageTk, Image
 import secrets
 
 
 # window config
 window = Tk()
-window.geometry("447x314")
+window.geometry("500x600")
 window.title("Duke KeyGen of Death")
 window.configure(background="black")
 window.resizable(False, False)
 
-#  photo
-skull_photo = PhotoImage(file="skull.gif")
-Label(window, image=skull_photo, bg="black").grid(row=0, column=0, sticky=E)
+#  photo stuff
+fortnite_img_path = "resources/fortnite.jpg"
+img = ImageTk.PhotoImage(Image.open(fortnite_img_path))
+Label(window, image=img, bg="black").pack()
 
 
 def display_key():
