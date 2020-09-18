@@ -1,4 +1,4 @@
-from tkinter import Label, Tk, PhotoImage, Text, Button, E
+from tkinter import *
 from PIL import ImageTk, Image
 import secrets
 
@@ -7,13 +7,31 @@ import secrets
 window = Tk()
 window.geometry("500x600")
 window.title("Duke KeyGen of Death")
-window.configure(background="black")
+window.configure(background="blue")
 window.resizable(False, False)
 
 #  photo stuff
 fortnite_img_path = "resources/fortnite.jpg"
 img = ImageTk.PhotoImage(Image.open(fortnite_img_path))
 Label(window, image=img, bg="black").pack()
+
+
+# slider knob
+value = IntVar()
+
+slider = Scale(
+    window,
+    from_=100, to=10000,
+    resolution=100,
+    orient=HORIZONTAL,
+    variable=value,
+    bg="royal blue",
+    width=75,
+    length=350,
+    font=("Arial Black", 14)
+)
+
+slider.place(x=100, y=375)
 
 
 def display_key():
@@ -33,8 +51,8 @@ def display_key():
 
 
 # button
-genkey_btn = Button(window, text="Generate a Key", command=display_key, bg="green")
-genkey_btn.place(x=180, y=30)
+genkey_btn = Button(window, text="Generate a Key", command=display_key, bg="PaleGreen2", font=("Impact", 14))
+genkey_btn.place(x=200, y=500)
 
 
 window.mainloop()
