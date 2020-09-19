@@ -1,4 +1,5 @@
 from tkinter import *
+from PIL import ImageTk, Image
 import secrets
 
 
@@ -10,8 +11,10 @@ window.configure(background="gold")
 window.resizable(False, False)
 
 #  photo stuff
-img = PhotoImage(file="fortnite.gif")
-bg_img_label = Label(window, image=img).grid(row=0, column=0, sticky=E)
+img = Image.open("vbucks.jpeg")
+img = img.resize((500, 600), Image.ANTIALIAS)
+vbucks_img = ImageTk.PhotoImage(img)
+bg_img_label = Label(window, image=vbucks_img).grid(row=0, column=0, sticky=E)
 
 # slider label
 slider_label = Label(
