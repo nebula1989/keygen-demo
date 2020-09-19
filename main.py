@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Tk, Label, Scale, IntVar, HORIZONTAL, Text, Button
 from PIL import ImageTk, Image
 import secrets
 
