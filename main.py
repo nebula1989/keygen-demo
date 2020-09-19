@@ -10,17 +10,17 @@ window.configure(background="gold")
 window.resizable(False, False)
 
 #  photo stuff
-img = PhotoImage(file="resources/fortnite.gif")
+img = PhotoImage(file="fortnite.gif")
 bg_img_label = Label(window, image=img).grid(row=0, column=0, sticky=E)
 
 # slider label
 slider_label = Label(
     text="V-Bucks",
-    font=("Impact", 12),
+    font=("Impact", 14),
     bg="royal blue",
 
 )
-slider_label.place(x=16, y=414)
+slider_label.place(x=16, y=412)
 
 # slider knob
 slider_value = IntVar()
@@ -58,7 +58,7 @@ def display_key():
 
 
         )
-    key_label.place(x=90, y=330)
+    key_label.place(x=94, y=330)
 
     # key text
     key_text = Text(
@@ -71,7 +71,7 @@ def display_key():
 
     )
     key_text.insert(1.0, (" " + first4 + " - " + second4 + " - " + third4 + " - " + fourth4))
-    key_text.place(x=85, y=360)
+    key_text.place(x=87, y=360)
 
 
 # button
