@@ -1,5 +1,4 @@
-from tkinter import Tk, Label, Scale, IntVar, HORIZONTAL, Text, Button
-from PIL import ImageTk, Image
+from tkinter import *
 import secrets
 
 
@@ -7,13 +6,12 @@ import secrets
 window = Tk()
 window.geometry("500x600")
 window.title("Duke KeyGen of Death")
-window.configure(background="blue")
+window.configure(background="gold")
 window.resizable(False, False)
 
 #  photo stuff
-fortnite_img_path = "resources/fortnite.jpg"
-img = ImageTk.PhotoImage(Image.open(fortnite_img_path))
-Label(window, image=img).pack()
+img = PhotoImage(file="resources/fortnite.gif")
+bg_img_label = Label(window, image=img).grid(row=0, column=0, sticky=E)
 
 # slider label
 slider_label = Label(
@@ -38,7 +36,7 @@ slider = Scale(
     font=("Arial Black", 14)
 )
 
-slider.place(x=75, y=410)
+slider.place(x=87, y=410)
 
 
 def display_key():
@@ -54,9 +52,9 @@ def display_key():
 
     # display the and label and generated key text
     key_label = Label(
-        text=("The Code for " + str(slider_value.get()) + " V-Bucks is"),
+        text=("The Code for " + str(slider_value.get()) + " V-Bucks is: "),
         font=("Arial Black", 12),
-        bg="grey79",
+        bg="white",
 
 
         )
@@ -69,7 +67,7 @@ def display_key():
         width=21,
         borderwidth=2,
         font=("Impact", 22),
-        bg="grey79",
+        bg="white",
 
     )
     key_text.insert(1.0, (" " + first4 + " - " + second4 + " - " + third4 + " - " + fourth4))
