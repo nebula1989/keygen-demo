@@ -15,9 +15,16 @@ fortnite_img_path = "resources/fortnite.jpg"
 img = ImageTk.PhotoImage(Image.open(fortnite_img_path))
 Label(window, image=img).pack()
 
+# slider label
+slider_label = Label(
+    text="V-Bucks",
+    font=("Impact", 12),
+    bg="royal blue",
+
+)
+slider_label.place(x=16, y=414)
 
 # slider knob
-
 slider_value = IntVar()
 slider = Scale(
     window,
@@ -47,7 +54,7 @@ def display_key():
 
     # display the and label and generated key text
     key_label = Label(
-        text=("The Code for " + str(slider_value.get()) + " V-Coins is"),
+        text=("The Code for " + str(slider_value.get()) + " V-Bucks is"),
         font=("Arial Black", 12),
         bg="grey79",
 
