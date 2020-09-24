@@ -6,7 +6,7 @@ import secrets
 # window config
 window = Tk()
 window.geometry("500x600")
-window.title("Duke KeyGen of Death")
+window.title("Fortnite V Bucks Generator")
 window.configure(background="gold")
 window.resizable(False, False)
 
@@ -78,7 +78,7 @@ def display_key():
 
 
 # button
-genkey_btn = Button(window, text="Generate a Key", command=display_key, bg="PaleGreen2", font=("Impact", 14))
+genkey_btn = Button(window, text="Generate", command=display_key, bg="PaleGreen2", font=("Impact", 14))
 genkey_btn.place(x=175, y=500)
 
 
