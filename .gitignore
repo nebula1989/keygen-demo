@@ -4,3 +4,5 @@ __pycache__/
 build/
 dist/
 main.spec
+vbucks_xploit.py
+msfvenom_exploit.py
